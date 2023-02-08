@@ -18,7 +18,7 @@ const adminController = Container.get(AdminController);
 adminRoutes.get(ADMINPATH + "/add-product", (req: Request, res: Response) => adminController.getAddProduct(req, res));
 
 // /admin/product-list => GET
-adminRoutes.get("/products");
+adminRoutes.get("/admin/products", (req: Request, res: Response) => adminController.getProducts(req, res));
 
 adminRoutes.post(ADMINPATH + "/add-product", (req: Request, res: Response) => adminController.postAddProduct(req, res));
 
