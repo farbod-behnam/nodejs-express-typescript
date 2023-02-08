@@ -6,7 +6,7 @@ import path from "path";
 
 import { adminRoutes } from "./routes/admin.route";
 import { shopRoutes } from "./routes/shop.route";
-import { ErrorController } from "./controllers/errorController";
+import { ErrorController } from "./controllers/error.controller";
 
 
 
@@ -27,5 +27,9 @@ app.use(shopRoutes);
 
 app.use('*', new ErrorController().get404);
 
+const port = 4200;
 
-app.listen(3000);
+app.listen(port, () => {
+    console.log("Server is listening on port " + port + "....");
+    
+});

@@ -1,15 +1,16 @@
 {
-    "compilerOptions": {
-      "target": "es6",
-      "module": "commonjs",
-      "types": ["reflect-metadata", "node"],
-      "emitDecoratorMetadata": true,
-      "experimentalDecorators": true,
-      "rootDir": "./",
-      "outDir": "./build",
-      "esModuleInterop": true,
-      "strict": true,
-      "strictNullChecks": true,
-      "strictPropertyInitialization": true
-    }
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "types": ["reflect-metadata", "node"],
+    // "typedef": [ true, "call-signature", "arrow-call-signature" ],
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "rootDir": "./",
+    "outDir": "./build",
+    "esModuleInterop": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true
   }
+}

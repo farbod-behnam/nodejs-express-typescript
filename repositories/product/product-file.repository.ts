@@ -2,11 +2,12 @@ import fs from "fs";
 import path from "path";
 import { Service } from "typedi";
 
-import { Product } from "../models/product";
-import { Repository } from "./repository";
+import { Product } from "../../models/product.model";
+import { ProductRepository } from "./product.repository";
 
 @Service()
-export class ProductFileRepository implements Repository<Product> {
+export class ProductFileRepository implements ProductRepository {
+
 
 
     save(product: Product): void {
@@ -31,6 +32,18 @@ export class ProductFileRepository implements Repository<Product> {
 
     }
 
+    async findById(id: string): Promise<Product> {
+        const products: Product[] = await this.fetchAll();
+
+        return new Promise((resolve, rejects) => {
+            for (let product of products) {
+                if (product.id === id)
+                    resolve(product);
+            }
+            rejects(undefined);
+        })
+    }
+
 
 
     private createProductFilePath(): string {
@@ -48,7 +61,8 @@ export class ProductFileRepository implements Repository<Product> {
 
     private writeProductsToFileAsJson(createdFilePath: string, products: Product[]) {
         fs.writeFile(createdFilePath, JSON.stringify(products), (error) => {
-            console.log(error);
+            console.log("writeProductsToFileAsJson error message =>", error?.message);
+            console.log("writeProductsToFileAsJson error stack =>", error?.stack);
         });
     }
 

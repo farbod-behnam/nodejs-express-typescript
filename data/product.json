@@ -1,1 +1,16 @@
-[{"title":"Book"},{"title":"aaaaaaaaaaaaaaaaaaaaa"},{"title":"aa"},{"title":"boook 1"},{"title":"bbbbbbbbbbbb"},{"title":"hello"},{"title":"666"},{"title":"Fourth Book"}]
+[
+    {
+        "id": "123245",
+        "title": "A Book",
+        "imageUrl": "https://img.freepik.com/premium-photo/opened-book-bible-background_112554-164.jpg?w=360",
+        "description": "This is an awesome book!",
+        "price": 19.99
+    },
+    {
+        "id": "0.23528886889804235",
+        "title": "Another Product",
+        "imageUrl": "https://www.junglescout.com/wp-content/uploads/2021/01/product-photo-water-bottle-hero.png",
+        "description": "Another very amazing !",
+        "price": 20.99
+    }
+]
